@@ -1,13 +1,13 @@
 <h1>Insert review</h1>
 
-<%= simple_form_for (@review) do |f| %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
   <%= f.input :content %>
   <%= f.input :rating %>
 
   <%= f.submit "add a review", class: "btn btn-primary" %>
-
-
-<%=link_to "restaurant", restaurants_path%>
-
-
 <% end %>
+
+
+
+
+<%= link_to "restaurant", restaurants_path %>
